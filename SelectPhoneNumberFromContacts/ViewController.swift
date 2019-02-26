@@ -61,8 +61,3 @@ class ViewController: UIViewController, CNContactPickerDelegate {
         parsedCountryLabel.text = notAvailable
     }
 }
-
-/*
-// Future Reference:
-https://github.com/marmelroy/PhoneNumberKit
-*/
