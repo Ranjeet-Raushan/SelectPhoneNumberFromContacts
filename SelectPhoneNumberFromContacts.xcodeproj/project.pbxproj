@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB2AA03AE4A177F74397DB67 /* Pods_SelectPhoneNumberFromContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E449B3C2AFFD86EEE82B5B7C /* Pods_SelectPhoneNumberFromContacts.framework */; };
 		E50AFC5F222522910057D2DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50AFC5E222522910057D2DD /* AppDelegate.swift */; };
 		E50AFC61222522910057D2DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50AFC60222522910057D2DD /* ViewController.swift */; };
 		E50AFC64222522910057D2DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E50AFC62222522910057D2DD /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D764C72B870BFA6785CC934B /* Pods-SelectPhoneNumberFromContacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelectPhoneNumberFromContacts.release.xcconfig"; path = "Target Support Files/Pods-SelectPhoneNumberFromContacts/Pods-SelectPhoneNumberFromContacts.release.xcconfig"; sourceTree = "<group>"; };
+		DC96D847EE91FB8DACD5C698 /* Pods-SelectPhoneNumberFromContacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelectPhoneNumberFromContacts.debug.xcconfig"; path = "Target Support Files/Pods-SelectPhoneNumberFromContacts/Pods-SelectPhoneNumberFromContacts.debug.xcconfig"; sourceTree = "<group>"; };
+		E449B3C2AFFD86EEE82B5B7C /* Pods_SelectPhoneNumberFromContacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SelectPhoneNumberFromContacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50AFC5B222522910057D2DD /* SelectPhoneNumberFromContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelectPhoneNumberFromContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50AFC5E222522910057D2DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E50AFC60222522910057D2DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB2AA03AE4A177F74397DB67 /* Pods_SelectPhoneNumberFromContacts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08E84167251A414523D08A3B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC96D847EE91FB8DACD5C698 /* Pods-SelectPhoneNumberFromContacts.debug.xcconfig */,
+				D764C72B870BFA6785CC934B /* Pods-SelectPhoneNumberFromContacts.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		78DA0E9868190E4332E9F02E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E449B3C2AFFD86EEE82B5B7C /* Pods_SelectPhoneNumberFromContacts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E50AFC52222522910057D2DD = {
 			isa = PBXGroup;
 			children = (
 				E50AFC5D222522910057D2DD /* SelectPhoneNumberFromContacts */,
 				E50AFC5C222522910057D2DD /* Products */,
+				08E84167251A414523D08A3B /* Pods */,
+				78DA0E9868190E4332E9F02E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E50AFC6D222522930057D2DD /* Build configuration list for PBXNativeTarget "SelectPhoneNumberFromContacts" */;
 			buildPhases = (
+				32B603D69195FA4B093FC387 /* [CP] Check Pods Manifest.lock */,
 				E50AFC57222522910057D2DD /* Sources */,
 				E50AFC58222522910057D2DD /* Frameworks */,
 				E50AFC59222522910057D2DD /* Resources */,
+				97B28996FAD740AB63508130 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32B603D69195FA4B093FC387 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SelectPhoneNumberFromContacts-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97B28996FAD740AB63508130 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SelectPhoneNumberFromContacts/Pods-SelectPhoneNumberFromContacts-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PhoneNumberKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SelectPhoneNumberFromContacts/Pods-SelectPhoneNumberFromContacts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E50AFC57222522910057D2DD /* Sources */ = {
@@ -280,11 +353,13 @@
 		};
 		E50AFC6E222522930057D2DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC96D847EE91FB8DACD5C698 /* Pods-SelectPhoneNumberFromContacts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q43MV2Y52R;
 				INFOPLIST_FILE = SelectPhoneNumberFromContacts/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +373,13 @@
 		};
 		E50AFC6F222522930057D2DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D764C72B870BFA6785CC934B /* Pods-SelectPhoneNumberFromContacts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q43MV2Y52R;
 				INFOPLIST_FILE = SelectPhoneNumberFromContacts/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
