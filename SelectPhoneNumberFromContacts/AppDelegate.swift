@@ -15,9 +15,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
-
-
-/*
- // Future Reference:
- https://github.com/marmelroy/PhoneNumberKit
- */
