@@ -60,7 +60,6 @@ class ViewController: UIViewController, CNContactPickerDelegate {
         parsedCountryCodeLabel.text = notAvailable
         parsedCountryLabel.text = notAvailable
     }
-    //print("Ranjeet")
 }
 
 /*
